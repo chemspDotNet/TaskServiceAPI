@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskServiceAPI", "TaskServi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLScript", "SQLScript", "{3F0D6D68-1318-4797-99EC-E75F20D6E447}"
 	ProjectSection(SolutionItems) = preProject
-		C:\Users\Patel\Documents\script.sql = C:\Users\Patel\Documents\script.sql
+		SqlScript.sql = SqlScript.sql
 	EndProjectSection
 EndProject
 Global
