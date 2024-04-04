@@ -187,30 +187,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\TasksController.cs" />
     <Compile Include="AuthenticationService\AuthenticationModule.cs" />
-    <Compile Include="DAL_Layer\ErrorLog.cs">
-      <DependentUpon>TaskDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL_Layer\TaskDBModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TaskDBModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL_Layer\TaskDBModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TaskDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL_Layer\TaskDBModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TaskDBModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DAL_Layer\tblTask.cs">
-      <DependentUpon>TaskDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL_Layer\tblUser.cs">
-      <DependentUpon>TaskDBModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="DAL_Lyr\ErrorLog.cs" />
+    <Compile Include="DAL_Lyr\TaskDBContext.cs" />
+    <Compile Include="DAL_Lyr\tblTask.cs" />
+    <Compile Include="DAL_Lyr\tblUser.cs" />
     <Compile Include="ErrorLogger\ApiError.cs" />
     <Compile Include="CustomFilters\CustomException.cs" />
     <Compile Include="ErrorLogger\ErrorLoggingService.cs" />
@@ -236,16 +216,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="DAL_Layer\TaskDBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TaskDBModel.edmx</DependentUpon>
-      <LastGenOutput>TaskDBModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DAL_Layer\TaskDBModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TaskDBModel.edmx</DependentUpon>
-      <LastGenOutput>TaskDBModel.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -270,13 +240,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="DAL_Layer\TaskDBModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TaskDBModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DAL_Layer\TaskDBModel.edmx.diagram">
-      <DependentUpon>TaskDBModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

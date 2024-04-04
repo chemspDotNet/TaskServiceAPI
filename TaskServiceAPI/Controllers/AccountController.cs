@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Http;
-using TaskServiceAPI.DAL_Layer;
+using TaskServiceAPI.DAL_Lyr;
 using TaskServiceAPI.CustomFilters;
 using TaskServiceAPI.Models;
 using TaskServiceAPI.AuthenticationService;
@@ -13,7 +13,7 @@ namespace TaskServiceAPI.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class AccountController : ApiController
     {
-        static TaskDBEntities1 td = new TaskDBEntities1();
+        static TaskDBContext td = new TaskDBContext();
 
         [HttpPost]
         [Route("api/login")]

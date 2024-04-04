@@ -5,18 +5,18 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using TaskServiceAPI.AuthenticationService;
-using TaskServiceAPI.DAL_Layer;
 using TaskServiceAPI.CustomFilters;
 using System.Web.Http.Cors;
+using TaskServiceAPI.DAL_Lyr;
 
 namespace TaskServiceAPI.Controllers
 {
-   // [CustomExceptionFilter]
+    [CustomExceptionFilter]
    // [JWTAuthenticationFilter]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TasksController : ApiController
     {
-        static TaskDBEntities1 taskEntities = new TaskDBEntities1();
+        static TaskDBContext  taskEntities = new TaskDBContext();
 
         public IHttpActionResult GetTasks()
         {

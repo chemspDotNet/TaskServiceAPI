@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using TaskServiceAPI.DAL_Layer;
+using TaskServiceAPI.DAL_Lyr;
 using AutoMapper;
 
 namespace TaskServiceAPI.ErrorLogger
@@ -16,10 +16,10 @@ namespace TaskServiceAPI.ErrorLogger
 
             try
             {
-                using (TaskDBEntities1 tsk = new TaskDBEntities1())
+                using (TaskDBContext tsk = new TaskDBContext())
                 {
 
-                    DAL_Layer.ErrorLog errorlogs = new ErrorLog();
+                    DAL_Lyr.ErrorLog errorlogs = new ErrorLog();
                     errorlogs.Message = apiError.Message;
                     errorlogs.RequestMethod_ = apiError.RequestMethod;
                     errorlogs.RequestUri_ = apiError.RequestUri;
